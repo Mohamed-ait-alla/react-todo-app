@@ -10,6 +10,12 @@
 }
 
 .to-do-container ul li {
-  width: 180px;
+  width: 170px;
   overflow-wrap: break-word;
+  list-style-type: "✍️";
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
 }
