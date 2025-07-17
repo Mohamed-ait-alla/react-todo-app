@@ -20,16 +20,27 @@ function App() {
     newTodos[index].completed = !newTodos[index].completed;
     setTodos(newTodos);
     }
+
+  const handleDeltedItems = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  }
   
   // the web page structure
   return (
-    <div className="App">
-      <h2>To Do List</h2>
-      <div className='to-do-container'>
+    <div className="app">
+      <h2 className= 'app-header'>To Do List</h2>
+      <div className= 'to-do-container'>
         <ul>
           {
             todos.map((item, index) => {
-              return <li key = {index + Math.random() * 5} className= {item.completed ? "done": ""} onClick={() => handleDoneItems(index)}>{item.inputItem}</li>;
+              return (
+                <div key= {index + Math.random() * 5} className= 'item'>
+                  <li key= {index + Math.random() * 5} className= {item.completed ? "done": ""} onClick={() => handleDoneItems(index)}>{item.inputItem}</li>
+                  <span key= {index + Math.random() * 7} className= 'remove-item' onClick={() => handleDeltedItems(index)}>❌</span>
+                </div>
+              );
             })
           }
         </ul>
