@@ -1,7 +1,88 @@
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
 .app {
-  border: 1px solid #3d3d3d;
+  border: 1px solid #1e90ff;
   margin: 50px 30px;
   padding: 25px 15px;
+  background-color: #f0f4f8;
+}
+
+.app-dark {
+  border: 1px solid #1e90ff;
+  margin: 50px 30px;
+  padding: 25px 15px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+h2 {
+  color: #1e90ff;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.input {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.input:focus {
+  border-color: #5eabf8;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #5eabf8;
+}
+
+.input-dark {
+  background-color: #3a3f4b;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 2px;
+}
+
+.input-dark:focus {
+  border-color: #5eabf8;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #5eabf8;
+}
+
+.add-btn {
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+  border-radius: 2px;
+}
+
+.add-btn:hover {
+  background-color: #a2c5f8;
+}
+
+.add-btn-dark {
+  background-color: 	#3399ff;
+  color: #fff;
+  border-radius: 2px;
+  border: 1px solid #5eabf8;
+}
+
+.add-btn-dark:hover {
+  background-color: #0d81f5;
 }
 
 .to-do-container {
@@ -10,13 +91,32 @@
 }
 
 .to-do-container ul li {
-  width: 170px;
+  white-space: normal;
+  word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
   list-style-type: "✍️";
   cursor: pointer;
+  color: #333333;
+}
+
+.to-do-container-dark {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-container-dark ul li {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  list-style-type: "✍️";
+  cursor: pointer;
+  color: #e0e0e0;
 }
 
 .done {
+  color: #8bc34a;
   text-decoration: line-through;
 }
 
@@ -28,4 +128,23 @@
 
 .remove-item {
   cursor: pointer;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0d6efd;
 }
